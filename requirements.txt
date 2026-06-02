@@ -4,17 +4,14 @@ numpy>=2.1
 scikit-learn>=1.5.2
 pandas>=2.2.3
 
-# --- Optional, but strongly recommended ---
-# Semantic embedding layer (Sentence-BERT). Lazy-imported in embedding.py;
-# without it, the semantic sub-score degrades to 0 and the demo runs on
-# keyword + content-audit only.
-#
-# NOTE: sentence-transformers depends on PyTorch, which does NOT ship
-# wheels for Intel macOS + Python 3.13. If you are on that combination,
-# either:
-#   (1) use Python 3.11 (recommended), then uncomment the line below; or
-#   (2) leave it commented and run the keyword-only demo.
-#
+# --- Semantic embedding layer (Sentence-BERT) ---
+# Lazy-imported in embedding.py; without it the app falls back to a TF-IDF
+# cosine semantic score. Pulls in PyTorch, which has wheels for:
+#   - Linux x86_64 (Streamlit Community Cloud — pinned to py3.11 via runtime.txt)
+#   - macOS arm64 (Apple Silicon)
+#   - Windows x86_64
+# NOT available for Intel macOS + Python 3.13/3.14 — comment this out if you
+# hit a torch resolution error on that combination.
 sentence-transformers>=3.2.1
 
 # --- Optional file readers (only needed if users upload PDF / DOCX) ---

@@ -7,8 +7,16 @@ from __future__ import annotations
 
 import io
 import json
+import sys
 import tempfile
 from pathlib import Path
+
+# Make the package importable when this script is launched directly (e.g. by
+# Streamlit Community Cloud) without PYTHONPATH=src being set. The package
+# lives at <repo>/src/resumemax/, so add <repo>/src/ to sys.path.
+_SRC_DIR = Path(__file__).resolve().parent.parent
+if str(_SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(_SRC_DIR))
 
 import streamlit as st
 
