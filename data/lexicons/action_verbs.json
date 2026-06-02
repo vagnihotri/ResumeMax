@@ -1,0 +1,20 @@
+{
+  "strong": [
+    "achieved","accelerated","architected","authored","automated","built","collaborated",
+    "configured","created","decreased","delivered","deployed","designed","developed",
+    "directed","engineered","established","evaluated","executed","expanded","forecasted",
+    "generated","headed","implemented","improved","increased","initiated","launched",
+    "led","managed","mentored","migrated","optimized","orchestrated","overhauled",
+    "owned","piloted","pioneered","prototyped","reduced","refactored","researched",
+    "scaled","shipped","spearheaded","streamlined","trained"
+  ],
+  "weak": [
+    "responsible for","worked on","helped","assisted","participated","duties included",
+    "tasked with","involved in","handled","supported"
+  ],
+  "buzzwords": [
+    "synergy","go-getter","team player","rockstar","ninja","guru","results-driven",
+    "self-starter","hardworking","detail-oriented","strategic thinker","thought leader",
+    "out of the box","best of breed","leverage","value add"
+  ]
+}
