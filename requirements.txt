@@ -1,16 +1,25 @@
-spacy==3.7.5
-nltk==3.9.1
-scikit-learn==1.5.2
-sentence-transformers==3.2.1
-transformers==4.45.2
-torch==2.4.1
-pdfplumber==0.11.4
-python-docx==1.1.2
-PyMuPDF==1.24.10
-pandas==2.2.3
-numpy==1.26.4
-rapidfuzz==3.10.0
-streamlit==1.39.0
-faiss-cpu==1.9.0
-matplotlib==3.9.2
-pytest==8.3.3
+# --- Core (required) ---
+streamlit>=1.39
+numpy>=2.1
+scikit-learn>=1.5.2
+pandas>=2.2.3
+
+# --- Optional, but strongly recommended ---
+# Semantic embedding layer (Sentence-BERT). Lazy-imported in embedding.py;
+# without it, the semantic sub-score degrades to 0 and the demo runs on
+# keyword + content-audit only.
+#
+# NOTE: sentence-transformers depends on PyTorch, which does NOT ship
+# wheels for Intel macOS + Python 3.13. If you are on that combination,
+# either:
+#   (1) use Python 3.11 (recommended), then uncomment the line below; or
+#   (2) leave it commented and run the keyword-only demo.
+#
+sentence-transformers>=3.2.1
+
+# --- Optional file readers (only needed if users upload PDF / DOCX) ---
+pdfplumber>=0.11.4
+python-docx>=1.1.2
+
+# --- Optional: fuzzy skill matching in taxonomy.py ---
+rapidfuzz>=3.10

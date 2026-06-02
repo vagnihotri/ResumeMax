@@ -1,0 +1,64 @@
+# --- Virtual environments (all files inside) ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python bytecode / caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Build / packaging artifacts ---
+build/
+dist/
+*.egg
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+
+# --- Test / coverage caches ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/
+
+# --- Type checkers ---
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# --- Jupyter / IPython ---
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS noise ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Streamlit local state / secrets ---
+.streamlit/secrets.toml
+
+# --- Project-specific transient outputs ---
+outputs/
+*.log
